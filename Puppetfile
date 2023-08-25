@@ -7,8 +7,7 @@ mod 'puppetlabs-concat', '2.2.0'
 mod 'puppetlabs-ntp', '4.2.0'
 mod 'puppetlabs-vcsrepo', '1.5.0'
 mod 'voxpupuli-jenkins', 
-  :git => 'https://github.com/nuclearsandwich/puppet-jenkins',
-  :ref => '1.7.0-rosbuildfarm3'
+  :git => "https://github.com/voxpupuli/puppet-jenkins.git"
 mod 'stankevich/python', '1.18.2'
 mod 'newrelic-nrsysmond',
   :git => "https://github.com/newrelic/puppet-nrsysmond.git"
