@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <org.jenkinsci.plugins.ghprb.GhprbTrigger_-DescriptorImpl plugin="ghprb@1.16-5">
-  <serverAPIUrl><%= scope.function_hiera(["jenkins::github::api_url", 'https://api.github.com']) %></serverAPIUrl>
+  <serverAPIUrl><%= scope().call_function('hiera',["jenkins::github::api_url", 'https://api.github.com']) %></serverAPIUrl>
   <whitelistPhrase></whitelistPhrase>
   <okToTestPhrase></okToTestPhrase>
   <retestPhrase>.*test\W+this\W+please.*</retestPhrase>
@@ -16,7 +16,7 @@
   <displayBuildErrorsOnDownstreamBuilds>false</displayBuildErrorsOnDownstreamBuilds>
   <username></username>
   <password></password>
-  <accessToken><%= scope.function_hiera(["jenkins::github::token"]) %></accessToken>
+  <accessToken><%= scope().call_function('hiera',["jenkins::github::token"]) %></accessToken>
   <adminlist></adminlist>
   <publishedURL></publishedURL>
   <requestForTestingPhrase>Can one of the admins verify this patch?</requestForTestingPhrase>
