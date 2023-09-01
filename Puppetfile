@@ -4,6 +4,9 @@ mod 'example42-iptables', '2.1.15'
 mod 'garethr-docker',
   :git => 'https://github.com/lozeki/garethr-docker.git',
   :ref => '5.3.0'
+mod 'puppetlabs-apt',
+  :git => 'https://github.com/lozeki/puppetlabs-apt.git',
+  :ref => '4.5.2'
 mod 'puppetlabs-apache', '1.11.0'
 mod 'puppetlabs-concat', '2.2.0'
 mod 'puppetlabs-ntp', '9.0.0'
