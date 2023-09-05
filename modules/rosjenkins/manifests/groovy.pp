@@ -11,7 +11,7 @@ define rosjenkins::groovy(
 
   exec { $title:
     provider  => 'shell',
-    command   => "java -jar $jarfile -s http://127.0.0.1:8080 -auth ${jenkinsauth} groovy = < $groovyfile",
+    command   => "java -jar $jarfile -s http://172.20.6.33:8080 -auth ${jenkinsauth} groovy = < $groovyfile",
     require   => [File[$jarfile, $groovyfile], Service['jenkins']],
     tries     => 5,
     try_sleep => 10,
